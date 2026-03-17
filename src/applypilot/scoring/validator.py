@@ -63,9 +63,10 @@ FABRICATION_WATCHLIST: set[str] = {
     "c#", "c++", "golang", "rust", "ruby",
     "kotlin", "swift", "scala", "matlab",
     # Frameworks for wrong languages
-    "spring", "django", "rails", "angular", "vue", "svelte",
+    # NOTE: "spring" and "angular" removed — Sunil uses Spring Boot and Angular
+    "django", "rails", "vue", "svelte",
     # Hard lies: certifications can't be stretched
-    "certif", "certified", "pmp", "scrum master", "aws certified",
+    "pmp", "scrum master",
 }
 
 REQUIRED_SECTIONS: set[str] = {"SUMMARY", "TECHNICAL SKILLS", "EXPERIENCE", "PROJECTS", "EDUCATION"}
