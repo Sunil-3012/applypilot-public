@@ -8,102 +8,84 @@
 
 queries:
   # Tier 1 — Core targets
-  - query: "software engineer Java"
-    tier: 1
-  - query: "backend engineer Java Spring Boot"
-    tier: 1
-  - query: "full stack engineer Java React"
-    tier: 1
   - query: "software engineer"
+    tier: 1
+  - query: "full stack Engineer"
     tier: 1
   - query: "backend engineer"
     tier: 1
 
   # Tier 2 — Strong matches
-  - query: "full stack developer"
-    tier: 2
   - query: "Java developer"
-    tier: 2
-  - query: "Spring Boot developer"
     tier: 2
   - query: "cloud engineer AWS"
     tier: 2
   - query: "DevOps engineer"
     tier: 2
-  - query: "platform engineer"
-    tier: 2
-  - query: "microservices engineer"
-    tier: 2
-  - query: "API engineer"
-    tier: 2
-
-  # Tier 3 — Wider net
-  - query: "software developer"
-    tier: 3
-  - query: "site reliability engineer"
-    tier: 3
-  - query: "solutions engineer"
-    tier: 3
-  - query: "integration engineer"
-    tier: 3
-  - query: "automation engineer"
-    tier: 3
-  - query: "cloud developer"
-    tier: 3
-  - query: "application developer"
-    tier: 3
 
 # ── Locations ─────────────────────────────────────────────────────────────────
 locations:
-  - location: "Tampa, FL"
-    remote: false
   - location: "Remote"
     remote: true
-  - location: "Florida"
+  - location: "Tampa, FL"
+    remote: false
+  - location: "United States"
     remote: false
 
 # ── Location filtering ────────────────────────────────────────────────────────
 location:
   accept_patterns:
+    - "Remote"
+    - "Anywhere"
     - "Tampa"
     - "Florida"
     - "FL"
-    - "Remote"
-    - "Anywhere"
     - "United States"
     - "US"
     - "USA"
     - "Hybrid"
-    - "Orlando"
-    - "Jacksonville"
-    - "Miami"
-    - "Atlanta"
+    - "New York"
+    - "San Francisco"
+    - "Seattle"
     - "Austin"
+    - "Chicago"
+    - "Boston"
+    - "Atlanta"
     - "Dallas"
+    - "Denver"
     - "Charlotte"
+    - "Orlando"
+    - "Miami"
+    - "Jacksonville"
+    - "Phoenix"
+    - "Los Angeles"
   reject_patterns:
-    - "onsite only"
     - "London, UK"
     - "India"
     - "Philippines"
     - "Canada only"
     - "Australia only"
     - "New Zealand"
+    - "UK only"
+    - "Europe only"
 
 # ── Country ───────────────────────────────────────────────────────────────────
 country: "USA"
+
+# ── Scrapers ──────────────────────────────────────────────────────────────────
+workday_enabled: false      # Set to true to also scrape company Workday portals
+smartextract_enabled: false # Set to true to enable AI-powered scraping
 
 # ── Job boards ────────────────────────────────────────────────────────────────
 boards:
   - indeed
   - linkedin
   - zip_recruiter
-  - google
 
 # ── Search defaults ───────────────────────────────────────────────────────────
 defaults:
   results_per_site: 100   # Max results per board per query
-  hours_old: 72           # Only jobs posted in the last 72 hours
+  hours_old: 24           # Only jobs posted in the last 72 hours
 
 # ── Negative keywords — skip jobs with these in the title ─────────────────────
 exclude_titles:
